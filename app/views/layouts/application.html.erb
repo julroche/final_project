@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CalTest2</title>
+  <%= stylesheet_link_tag "event_calendar", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application", :media => "all" %>
+ 
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+
+<!-- BEGIN #container -->
+  <div id="container">
+        
+    <!-- BEGIN #header -->
+      <header>
+        <div id="logo">
+
+        </div>
+        <h1>CougarCal.com</h1>
+   
+
+     <div id="user_nav">
+        <% if current_user %>
+        Logged in as <%= current_user.email %>
+       
+
+          <nav>
+          <ul>
+              <li><%= link_to "Log out", log_out_path %></li>
+              <li><%= link_to "Contact Us", log_out_path %></li>
+              <li><%= link_to "Create Activity Calendar", new_activity_path, class: "step1trig" %></li>
+              <li><%= link_to "Home", options_path %></li>
+          </ul>
+        </nav>   
+
+        <% else %>
+          <div class="authorization">
+            <ul>
+              <li><%= link_to "Sign Up", sign_up_path, class: "signupbutton1" %></li>
+              <li><%= link_to "Log In", log_in_path, class: "loginbutton1" %></li>
+            </ul>
+          </div>
+     
+        <% end %>
+      </div>
+
+   
+
+			</header>
+
+    	<div class="clear"></div>
+
+     <% if flash.present? %>
+      <div class= "alert">
+        <% flash.each do |name, msg| %>
+         <%= content_tag :div, msg, :id => "flash_#{name}" %>
+
+        <% end %>
+      </div>
+      <% end %>
+
+    			<%= yield %>
+
+	</div><!-- END #container -->
+
+     <div class="clear"></div>
+    <!-- BEGIN #footer -->
+    <footer> 
+            
+            <div id="copyright">
+                 &copy; Copyright 2013 CougarCal.
+            </div>
+                            
+            <div id="companybottom">
+                Theme brought to you by <a href="#">SchoolCals!</a>
+            </div>
+               	
+    </footer>
+
+</body>
+</html>

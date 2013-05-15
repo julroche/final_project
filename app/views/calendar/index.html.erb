@@ -1,0 +1,13 @@
+<!-- Probably move the stylesheet to you layout. Also make sure you include the javascript. -->
+
+
+<h1><%= @activity.activity_name %></h1>
+
+
+
+<%= raw(event_calendar) %>
+
+<% if current_user.id == @activity.user.id %>
+
+<%= link_to 'Add a New Event', new_event_path({:activity_id => @activity.id}), class: "create-new" %>
+<% end %>

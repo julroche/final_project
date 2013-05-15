@@ -1,0 +1,25 @@
+<%= javascript_include_tag "cal_wiz_3" %>
+
+<%= render :partial => '/events/cal_wiz' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+ <br />
+  <%= params[:event] %><br />
+  <br />
+  <%= params[:event][:name]%>
+</p>
+<br />
+	many_dates equals <%= @many_dates %><br />
+	<%= @start_hour %><br />
+	event_time1 equals <%= @event_time1 %><br />
+	test_array equals <%= @test_array %><br />
+	start_at_array equals <%= @start_at_array %><br />
+	end_at_array equals <%= @end_at_array %><br />
+	
+	events_array equals<%= @events_array %><br />
+ 
+
+
+

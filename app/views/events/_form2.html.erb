@@ -1,0 +1,61 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<%= f.hidden_field :activity_id, {:value => @current_activity_id} %>
+
+  <div class="field">
+    <%= f.label :activity_name, "Activity Name:" %><br />
+    <%= f.text_field :activity_name, {:value => @current_activity} %>
+
+  <div class="field">
+    <%= f.label :name, "Event Name:" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :many_dates, "Event Dates:" %><br />
+    <%= f.text_field :many_dates %>
+  </div>
+
+   <div class="field">
+    <%= f.label :many_start_times, "Default Start Time:" %><br />
+    <%= f.time_select :many_start_times,
+    :minute_step => 5 %>
+  </div>
+
+
+   <div class="field">
+    <%= f.label :many_end_times, "Default End Time:" %><br />
+    <%= f.time_select :many_end_times,
+    :minute_step => 5 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "NEXT" %>
+  </div>
+<% end %>
+
+<script>
+  $(document).ready(function() {
+    $('.step1').addClass('current_step');
+  });
+
+  $(document).unload(function() {
+    $('.step1').removeClass('current_step');
+  });
+
+  console.log("HEY YOU!")
+</script>
+
+
+

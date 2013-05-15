@@ -1,0 +1,41 @@
+<h1>Activities</h1>
+
+<table>
+  <tr>
+    <th>Activity</th>
+    <th>Name</th>
+    <th>Calendar Owner</th>
+    <th>Last Updated</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @activities.each do |activity| %>
+  
+  <tr>
+    <td><%= image_tag activity.activity_icon.url%></td>
+    <td><%= activity.activity_name %></td>
+    <td><%= activity.user.name %></td>
+    <td><%= activity.updated_at %></td>
+    <td><%= link_to 'Show', calendar_path(activity.id) %></td>
+
+    <% if current_user.id == activity.user.id %>
+    
+
+        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
+        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% else %>
+        <td></td>
+        <td></td>
+
+      <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'Add New Activity Calendar', new_activity_path, class: "create-new" %>

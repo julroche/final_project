@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="busy, calendars, school">
+    <meta name="description" content="When it's all happening">
+    <title>Options - Colonial Cal</title>
+    
+    <link rel="stylesheet" media="all" href="css/normalize.css">
+	<link rel="stylesheet" media="all" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- BEGIN #container -->
+    <div id="container">
+        
+    		
+    		<div class="clear"></div>
+
+        <!-- BEGIN .content -->
+        <div class="content">	
+
+    <!-- BEGIN #home-options  -->
+            <div id="home-options">
+                <div class="home-option">
+              
+                    <%= image_tag "ViewSchoolCalendar.jpg" %>
+                    <h2>View Calendars</h2>
+                    <p>Click here for a list of all of the existing Colonial group calendars.</p>
+
+                    <%= link_to "View Calendars", activities_path, class: "signupbutton1" %>
+                </div>
+                
+                <div class="home-option">
+              <!--       <p><strong><img src="images/cal_with_pencil.jpeg" title="sample" alt="Create Calendar"></strong></p> -->
+                    <%= image_tag "cal_with_pencil.jpeg" %>
+                    <h2>Create Calendars</h2>
+                    <p>Click here if you are a group organizer and want to enter your calendar to the site.  </p>
+
+                    <%= link_to "Create Calendars", new_activity_path, class: "signupbutton1" %>
+
+                </div>
+            </div><!-- END #home-options -->
+
+                <div class="clear"></div>
+                
+        </div><!-- END .content -->
+    </div><!-- END #container -->
+
+
+</body>
+</html>
