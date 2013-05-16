@@ -10,8 +10,9 @@
       </ul>
     </div>
   <% end %>
- <div class="field">
-    <%= f.label :activity_icon %><br />
+
+  <div class="field">
+    <%= f.label :activity_icon, 'Activity Icon:' %><br />
     <%= f.file_field :activity_icon %>
   </div>
   <div class="field">
@@ -19,24 +20,17 @@
     <%= f.text_field :activity_name %>
   </div>
 
-
-  <!-- <div class="field">
-    <%= f.label :user_id, 'Calendar Owner:' %><br />
-    <%= f.select :user_id,   
-      options_from_collection_for_select(User.order("name"),"id","name"), 
-        :include_blank => true %>
-    <br />
-  </div>-->
-
-<%= f.hidden_field :user_id, {:value => current_user.id} %>
+<!-- Hidden field pushes user_id into parameters for use in step 2
+ -->  
+  <%= f.hidden_field :user_id, {:value => current_user.id} %>
 
   <div class="action">
-  <!--   <%= f.submit %> -->
-  <%= f.submit 'Next', :class => "nextbutton1" %>
-  
+  <%= f.submit 'Next', :class => "nextbutton1" %> 
   </div>
+
 <% end %>
 
+<!-- JavaScript to show which step in Calendar Wizard -->
 <script>
   $(document).ready(function() {
     $('.step1').addClass('current_step');

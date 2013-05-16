@@ -7,7 +7,7 @@ class CalendarController < ApplicationController
   def index
   
     @activity = Activity.find(params[:id])
-  	#@activity = Activity.find(2)
+  	
 
     @month = (params[:month] || (Time.zone || Time).now.month).to_i
     @year = (params[:year] || (Time.zone || Time).now.year).to_i

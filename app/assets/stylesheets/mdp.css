@@ -29,10 +29,10 @@ code, pre.code {
 }
 
 .clear {clear: both;}
-
+/*
 a {text-decoration: none; color: #800;}
 a:hover {text-decoration: underline;}
-
+*/
 #share {
 	position: absolute;
 	right: 20px;
