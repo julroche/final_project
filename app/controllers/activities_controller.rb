@@ -4,7 +4,7 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.all
+    @activities = Activity.order("activity_name")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +17,8 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @current_activity = @activity
+
+    @activity_events_ordered = @activity.events.order("start_at")
 
     respond_to do |format|
       format.html # show.html.erb
