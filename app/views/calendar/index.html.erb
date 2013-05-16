@@ -3,9 +3,11 @@
 
 <h1><%= @activity.activity_name %></h1>
 
-
-
+<div class="clear"></div>
+<div class = "calendar-border">
 <%= raw(event_calendar) %>
+
+</div>
 
 <% if current_user.id == @activity.user.id %>
 
