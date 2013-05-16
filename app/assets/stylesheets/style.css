@@ -32,7 +32,7 @@ Version: 1.0
 
 }
 
-a.create-new {
+a.create-new, .router {
 	background-color: red;
 	color: white;
 	line-height: 80px;

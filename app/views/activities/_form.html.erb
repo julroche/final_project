@@ -36,3 +36,14 @@
   
   </div>
 <% end %>
+
+<script>
+  $(document).ready(function() {
+    $('.step1').addClass('current_step');
+  });
+
+  $(document).unload(function() {
+    $('.step1').removeClass('current_step');
+  });
+
+</script>
