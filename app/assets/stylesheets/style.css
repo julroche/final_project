@@ -156,13 +156,18 @@ header {
 
 .main_image img {
 
-	border-color:#BDBDBD #FFFFFF #FFFFFF #BDBDBD; /* adds a beveled border: grey on top/left, white on bottom/right */
+	border-color: #FFFFFF #BDBDBD #BDBDBD #FFFFFF; /* adds a beveled border: grey on top/left, white on bottom/right */
     border-style:solid;
     border-width:2px;
     border-radius: 14px;
     margin:5px;
 }
 
+h1.page-title {
+	text-align: center;
+	width: 100%;
+
+}
 
 /*----------------------------------------------------------------------------- 
 =03 AUTHORIZATION 
@@ -230,14 +235,14 @@ nav ul li a {
 	padding: 20px;
 }
 
-
+/*
 .options img{
-	border-color:#BDBDBD #FFFFFF #FFFFFF #BDBDBD; /* adds a beveled border: grey on top/left, white on bottom/right */
+	border-color:#BDBDBD #FFFFFF #FFFFFF #BDBDBD;  adds a beveled border: grey on top/left, white on bottom/right 
     border-style:solid;
     border-width:2px;
     border-radius: 14px;
     margin:20px 70px 10px 70px;
-}
+}*/
 
 
 #home-options {
@@ -279,12 +284,6 @@ nav ul li a {
 #blurb {
 	width:680px;
     border-color: #FFFFFF #BDBDBD #BDBDBD #FFFFFF; /* adds a beveled border: grey on top/left, white on bottom/right */
-    
-   /* -moz-box-shadow:*/
-   -moz-box-shadow:  4px 4px #ccc;
-   -webkit-box-shadow: 4px 4px #ccc;
-    box-shadow: 4px 4px #ccc;
-
     border-style:solid;
     border-width:2px;
     border-radius: 14px;
@@ -310,11 +309,11 @@ nav ul li a {
 		margin-right: 20px;
 		text-align: center;
 	}
-.account_signup a {
-	padding: 20px;
-	margin: 5px;
-	font-size: 20px;
-	}
+	.account_signup a {
+		padding: 20px;
+		margin: 5px;
+		font-size: 20px;
+		}
 
 .center {
 		width:200px;
@@ -352,7 +351,7 @@ th  {
 	background-color: #e01b32;
 	vertical-align:middle;
 	color: black;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: left;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -363,7 +362,7 @@ td  {
 	margin-bottom: 20px;
 	background-color: white;
 	color: black;
-	font-size: 12px;
+	font-size: 15px;
 }
 
 td a:hover {
@@ -441,10 +440,6 @@ a.step1trig {
 	font-size: 20px;
 }
 
-/*#save_dates {
-	background-color: lime;
-	margin-left: 50px;
-}*/
 
 label {
 	display:block;
@@ -476,21 +471,7 @@ input, textarea {
 	margin-left: 40px;
 }
 
-/*
-.event_title {
-	color:blue;
-}
-.event_location {
-	color:blue;
-}
 
-.event_date {
-	text-align: center;
-}
-
-.event_time {
-	color:green;
-}*/
 /*----------------------------------------------------------------------------- 
 =07 FOOTER 
 -----------------------------------------------------------------------------*/
@@ -503,7 +484,6 @@ footer {
 	margin-top: 30px;
 	height:20px;
 	width:960px;
-
 }
 
 /* Copyright */
@@ -519,15 +499,13 @@ footer {
 	width:290px;
 }
 
-
-
 /*----------------------------------------------------------------------------- 
 =08 MISC 
 -----------------------------------------------------------------------------*/
 .box_shadow {
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  -moz-box-shadow:    4px 4px  #ccc;
+  -webkit-box-shadow: 4px 4px  #ccc;
+  box-shadow:         4px 4px  #ccc;
 }
 
 .alignleft {

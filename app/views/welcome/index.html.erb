@@ -19,14 +19,13 @@
 
             <!-- BEGIN .main_image -->
             <div class="main_image">
-                <%= image_tag "Colonial600.jpg" %>
-                <%= image_tag "month_cal.jpeg" %>
-
+                <%= image_tag("Colonial600.jpg", :class => "box_shadow")%>
+                <%= image_tag("month_cal.jpeg", :class => "box_shadow")%>
            </div>
            <!-- END .main_image -->
     
             <!-- BEGIN #blurb -->
-            <div id="blurb">
+            <div id="blurb" class="box_shadow">
                     <h3>Want to know what's going on at Colonial and when?</h3>
                     <ul>
                         <li>See everything from the vacation calendar to band practices to scouts to after school enrichment classes.</li>
@@ -38,7 +37,7 @@
 
             <div class="account_signup">
                
-                <%= link_to "Sign Up Now - Free and Simple", sign_up_path, class: "signupbutton1" %>
+                <%= link_to "Sign Up Now - It's simple and free!", sign_up_path, class: "signupbutton1" %>
 
               
             </div> <!-- END .account_signup -->
