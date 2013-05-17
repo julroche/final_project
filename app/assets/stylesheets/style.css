@@ -54,6 +54,7 @@ body {
 a {
 	text-decoration:none;
 	color:#1FA2E1;
+	font-size: 20px;
 }
 
 	a:hover {
@@ -163,9 +164,15 @@ header {
     margin:25px;
 }
 
+.page-title {
+	font-size: 24px;
+}
+
 h1.page-title {
 	text-align: center;
 	width: 100%;
+	padding-bottom: 25px;
+	padding-top: 20px;
 
 }
 
@@ -353,7 +360,9 @@ table {
 }
 th  {
 	height:35px;
-	background-color: #e01b32;
+	background-color: white;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
 	vertical-align:middle;
 	color: black;
 	font-size: 18px;
@@ -375,8 +384,9 @@ td a:hover {
 }
 
 .calendar-border {
-	
-	border: 20px solid lime;
+	padding: 30px;
+	background-image:url('music_border.jpg');
+	border: 2px solid black;
 }
 
 
