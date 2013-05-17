@@ -164,15 +164,16 @@ header {
     margin:25px;
 }
 
-.page-title {
+h2.page-title {
 	font-size: 24px;
+	font-weight: bold;
+	padding-bottom: 25px;
+	padding-top: 20px;
 }
 
 h1.page-title {
 	text-align: center;
 	width: 100%;
-	padding-bottom: 25px;
-	padding-top: 20px;
 
 }
 
@@ -607,13 +608,17 @@ footer {
 	}
 
 	
-#test {
-    width: 32px;
-    height: 32px;
-    background: url('music.jpg');
+#icon {
+    width: 40px;
+    height: 40px;
+    background: url('basketball-ball.png');
+    float:right;
+    margin-right: 60px;
+    margin-top: 10px;
+
 }
 
-@-webkit-keyframes rotating {
+@-webkit-keyframes rotate {
     from{
         -webkit-transform: rotate(0deg);
     }
@@ -623,8 +628,7 @@ footer {
 }
 
 .rotating {
-    -webkit-animation: rotating 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
 }
 
 
-<div id='test' class='rotating'></div>

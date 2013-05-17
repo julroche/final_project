@@ -1,20 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<div class="page-title">
-  <b>Activity Name:</b>
+ <div id='icon' class='rotating'>
+</div>
+ <div id='icon' class='rotating'>
+</div>
+ <div id='icon' class='rotating'>
+</div>
+ <div id='icon' class='rotating'>
+</div>
+ <div id='icon' class='rotating'>
+</div>
+
+<h2 class="page-title">
+  Activity Name:
  <%= @activity.activity_name %>
+<p>
 </br>
-</br>
-  <b>Calendar Owner:</b>
-  <%= @activity.user.name %>
-  </br>
-</div>
+  Calendar Owner:
+  <%= @activity.user.name %> </p>
+</h2>
 
- <%= image_tag @activity.activity_icon.url %>
-<div class="clear"></div>
-
- <div id='test' class='rotating'>
-</div>
 
 <table>
   <tr>
@@ -41,7 +46,20 @@
 
 <% if current_user.id == @activity.user.id %>
   <%= link_to 'Add Events', new_event_path(:activity_id => @activity.id), class: "create-new" %> </br>
+  <%= link_to 'Edit', edit_activity_path,class: "router" %> |
 <% end %>
 
-<%= link_to 'Edit', edit_activity_path,class: "router" %> |
+
 <%= link_to 'Back', activities_path, class: "router" %>
+
+<script type="text/javascript">
+
+  console.log ("test")
+  var image_url = '<%= @image_url%>'
+  console.log (image_url)
+
+  $(document).ready(function() {
+    $('#icon.rotating').css('background', 'url(' + image_url + ')');
+    });
+
+</script>

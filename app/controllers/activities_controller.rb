@@ -17,6 +17,7 @@ class ActivitiesController < ApplicationController
   def show
     @activity = Activity.find(params[:id])
     @current_activity = @activity
+    @image_url = @activity.activity_icon
 
     @activity_events_ordered = @activity.events.order("start_at")
 
