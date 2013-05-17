@@ -605,3 +605,26 @@ footer {
 	#submit:hover {
 		opacity:0.9;
 	}
+
+	
+#test {
+    width: 32px;
+    height: 32px;
+    background: url('music.jpg');
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+}
+
+
+<div id='test' class='rotating'></div>

@@ -17,6 +17,7 @@ class CalendarController < ApplicationController
     # @event_strips = Event.event_strips_for_month(@shown_month)
   	@event_strips = current_activity.events.event_strips_for_month(@shown_month)
   
+    @image_url = @activity.activity_icon
 
   end
   
