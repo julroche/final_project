@@ -23,13 +23,40 @@ Version: 1.0
 -----------------------------------------------------------------------------*/
 /* In General we set up all our default styles for the site: body, h1-h6, p, a, etc. */
 
-.alert {
-	font-size: 32px;
+#flash_alert.alert {
+	font-size: 20px;
+	background-color: white;
 	color: red;
 	margin: 20px;
 	padding: 20px;
 	border: 5px solid black;
+}
 
+.alert {
+	font-size: 20px;
+	background-color: white;
+	color: red;
+	margin: 20px;
+	padding: 20px;
+	border: 5px solid black;
+}
+
+/*#flash_notice {
+	font-size: 32px;
+	background-color: white;
+	color: red;
+	margin: 20px;
+	padding: 20px;
+	border: 5px solid black;
+}*/
+
+.error_messages {
+	font-size: 20px;
+	background-color: white;
+	color: red;
+	margin: 20px;
+	padding: 20px;
+	border: 5px solid black;
 }
 
 a.create-new, .router {
@@ -54,7 +81,7 @@ body {
 a {
 	text-decoration:none;
 	color:#1FA2E1;
-	font-size: 20px;
+	font-size: 12px;
 }
 
 	a:hover {
@@ -469,9 +496,13 @@ input, textarea {
 	border:1px solid #dedede;
 	padding:10px;
 	vertical-align: middle;
-	margin-top:3px;
-	font-size:1.2em;
+	margin-top:5px;
+	font-size:1.4em;
 	color:#3a3a3a;
+}
+
+#activity_activity_icon {
+	margin-top: 10px;
 }
 
 .button_size {
@@ -531,7 +562,7 @@ footer {
 	clear:both;	
 }
 
-.signupbutton1, .nextbutton1 {
+.signupbutton1 {
 	
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
 	background:-moz-linear-gradient(center top, #ffc477 5%, #fb9e25 100% );
@@ -550,6 +581,27 @@ footer {
 	text-shadow:1px 1px 0px #cc9f52;
 }
 
+.nextbutton1 {
+	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+	background:-moz-linear-gradient(center top, #ffc477 5%, #fb9e25 100% );
+	background-color:#ffc477;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+	border:1px solid #eeb44f;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:5px 15px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #cc9f52;
+	height: 45px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 .signupbutton1:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
 	background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );

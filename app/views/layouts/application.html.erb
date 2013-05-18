@@ -26,7 +26,6 @@
         <% if current_user %>
         Logged in as <%= current_user.email %>
        
-
           <nav>
           <ul>
               <li><%= link_to "Log out", log_out_path %></li>
@@ -47,22 +46,21 @@
         <% end %>
       </div>
 
-   
-
 			</header>
 
     	<div class="clear"></div>
 
+     
      <% if flash.present? %>
-      <div class= "alert">
-        <% flash.each do |name, msg| %>
-         <%= content_tag :div, msg, :id => "flash_#{name}" %>
 
-        <% end %>
-      </div>
+        <div class="alert">
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <% end %>
+        </div>
       <% end %>
 
-    			<%= yield %>
+    	<%= yield %>
 
 	</div><!-- END #container -->
 
