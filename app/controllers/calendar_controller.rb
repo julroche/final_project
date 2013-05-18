@@ -1,8 +1,4 @@
 class CalendarController < ApplicationController
-  
-  def current_activity
-    @current_activity ||= @activity
-  end
 
   def index
   
@@ -15,10 +11,16 @@ class CalendarController < ApplicationController
     @shown_month = Date.civil(@year, @month)
 
     # @event_strips = Event.event_strips_for_month(@shown_month)
-  	@event_strips = current_activity.events.event_strips_for_month(@shown_month)
+  	@event_strips = @activity.events.event_strips_for_month(@shown_month)
   
     @image_url = @activity.activity_icon
 
+  end
+
+  private
+
+  def current_activity
+    @current_activity ||= @activity
   end
   
 end
