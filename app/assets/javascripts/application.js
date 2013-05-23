@@ -23,43 +23,10 @@ $(document).ready(function() {
 		saveDates()
 	});
 
-	// $('a.step1trig').click(function() {
-	// 	$('.step1').addClass('current_step');
-	// });
-
-	// $('.nextbutton1').click(function() {
-	// 	$('.step2').addClass('current_step');
-	// });
-
-	// $('a.step3trig').click(function() {
-	// 	$('.step3').addClass('current_step');
-	// });
-
-	var saveDates = function () {
-		var dates = $("#event_many_dates").multiDatesPicker('getDates');
-		console.log(dates);
-	};
-
-	$('#save_dates').click(function() {
-		saveDates()
-	});
-
 
 });
 
 
-
-// var dates = $("#end_at").multiDatesPicker('getDates');
-
-// 		$('#colors').append('<div class="color" style="background-color:' + colorString + '"/div>');
-// 		console.log($('div.color').length);
-
-// 	$('#add').click(function() {
-// 		var colorVal= $('#colors_string').val();
-// 		console.log(colorVal);
-// 		$('#colors_string').css('background-color',colorVal);
-// 		makeSq(colorVal);
-// 	});
 
 
 
