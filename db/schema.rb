@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(:version => 20130511160101) do
     t.datetime "end_at"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.string   "activity_id"
+    t.integer  "activity_id"
   end
 
   create_table "users", :force => true do |t|
