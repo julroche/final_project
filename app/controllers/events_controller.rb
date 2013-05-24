@@ -99,16 +99,7 @@ class EventsController < ApplicationController
 
     redirect_to calendar_path(params[:event][:activity_id]), :notice => "Created #{@events_array.count} new events. Click on events to edit."
 
-    # respond_to do |format|
-    #   if @event.save
-    #     # format.html { redirect_to @event, notice: 'Event was successfully created.' }
-    #     format.html { redirect_to @event, notice: 'Event was successfully created.' }
-    #     format.json { render json: @event, status: :created, location: @event }
-    #   else
-    #     format.html { render action: "new" }
-    #     format.json { render json: @event.errors, status: :unprocessable_entity }
-    #   end
-    # end
+ 
   end
 
   # PUT /events/1
