@@ -20,7 +20,7 @@ $(document).ready(function() {
   $("#event_many_dates").multiDatesPicker();
 
 	$('#save_dates').click(function() {
-		saveDates()
+		saveDates();
 	});
 
 
